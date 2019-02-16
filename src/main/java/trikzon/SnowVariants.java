@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import trikzon.handlers.RightClickHandler;
 
 import java.util.stream.Collectors;
 
@@ -35,6 +36,9 @@ public class SnowVariants {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        RightClickHandler rightClickHandler = new RightClickHandler();
+        MinecraftForge.EVENT_BUS.register(rightClickHandler);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
