@@ -9,21 +9,22 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
 import trikzon.SnowVariants;
 import trikzon.blocks.StairsSnow;
+import trikzon.util.EnumMaterials;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = SnowVariants.MODID)
 public class SVBlocks {
 
-    public static StairsSnow stairsOakSnow = new StairsSnow("stairs_oak_snow");
+    public static StairsSnow minecraftStairsOak = new StairsSnow(EnumMaterials.MINECRAFT_STAIRS_OAK);
 
     @SubscribeEvent
     public static void onBlockRegistration(final RegistryEvent.Register<Block> event) {
         IForgeRegistry<Block> registry = event.getRegistry();
-        registry.register(stairsOakSnow);
+        registry.register(minecraftStairsOak);
     }
 
     @SubscribeEvent
     public static void onItemRegistration(final RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        registry.register(new ItemBlock(stairsOakSnow, new Item.Properties()).setRegistryName(stairsOakSnow.getRegistryName()));
+        registry.register(new ItemBlock(minecraftStairsOak, new Item.Properties()).setRegistryName(minecraftStairsOak.getRegistryName()));
     }
 }

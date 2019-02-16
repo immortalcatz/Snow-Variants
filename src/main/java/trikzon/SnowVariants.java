@@ -21,7 +21,7 @@ public class SnowVariants {
     public static final String MODID = "snowvariants";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public SnowVariants() {
         // Register the setup method for modloading
