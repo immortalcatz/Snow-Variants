@@ -1,9 +1,9 @@
 {
 	"parent": "snowvariants:block/stairs_custom",
 	"textures": {
-		"bottom": "block/oak_planks",
-		"top": "block/oak_planks",
-		"side": "block/oak_planks",
+		"bottom": "block/red_sandstone_bottom",
+		"top": "block/red_sandstone_top",
+		"side": "block/red_sandstone",
 		"snowTop": "block/snow",
 		"snowSide": "snowvariants:block/snow_side"
 	}

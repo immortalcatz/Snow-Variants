@@ -10,7 +10,23 @@ import trikzon.SnowVariants;
 import trikzon.init.SVBlocks;
 
 public enum EnumMaterials implements IStringSerializable{
+    MINECRAFT_STAIRS_PURPUR("minecraft_stairs_purpur", Blocks.PURPUR_BLOCK, Blocks.PURPUR_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
     MINECRAFT_STAIRS_OAK("minecraft_stairs_oak", Blocks.OAK_PLANKS, Blocks.OAK_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_COBBLESTONE("minecraft_stairs_cobblestone", Blocks.COBBLESTONE, Blocks.COBBLESTONE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_BRICK("minecraft_stairs_brick", Blocks.BRICKS, Blocks.BRICK_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_STONE_BRICK("minecraft_stairs_stone_brick", Blocks.STONE_BRICKS, Blocks.STONE_BRICK_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_NETHER_BRICK("minecraft_stairs_nether_brick", Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_SANDSTONE("minecraft_stairs_sandstone", Blocks.SANDSTONE, Blocks.SANDSTONE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_SPRUCE("minecraft_stairs_spruce", Blocks.SPRUCE_PLANKS, Blocks.SPRUCE_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_BIRCH("minecraft_stairs_birch", Blocks.BIRCH_PLANKS, Blocks.BIRCH_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_JUNGLE("minecraft_stairs_jungle", Blocks.JUNGLE_PLANKS, Blocks.JUNGLE_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_QUARTZ("minecraft_stairs_quartz", Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_ACACIA("minecraft_stairs_acacia", Blocks.ACACIA_PLANKS, Blocks.ACACIA_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_DARK_OAK("minecraft_stairs_dark_oak", Blocks.DARK_OAK_PLANKS, Blocks.DARK_OAK_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_STAIRS_PRISMARINE("minecraft_stairs_prismarine", Blocks.PRISMARINE, Blocks.PRISMARINE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_PRISMARINE_BRICK("minecraft_stairs_prismarine_brick", Blocks.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_DARK_PRISMARINE("minecraft_stairs_dark_prismarine", Blocks.DARK_PRISMARINE, Blocks.DARK_PRISMARINE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
+    MINECRAFT_STAIRS_RED_SANDSTONE("minecraft_stairs_red_sandstone", Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "stairs"),
     MINECRAFT_SLAB_OAK("minecraft_slab_oak", Blocks.OAK_PLANKS, Blocks.OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_SPRUCE("minecraft_slab_spruce", Blocks.SPRUCE_PLANKS, Blocks.SPRUCE_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_BIRCH("minecraft_slab_birch", Blocks.BIRCH_PLANKS, Blocks.BIRCH_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
@@ -66,7 +82,23 @@ public enum EnumMaterials implements IStringSerializable{
     public Block getBlock() {
         if(blockType.equals("stairs")) {
             switch (name) {
+                case "minecraft_stairs_purpur": return SVBlocks.minecraftStairsPurpur;
                 case "minecraft_stairs_oak": return SVBlocks.minecraftStairsOak;
+                case "minecraft_stairs_cobblestone": return SVBlocks.minecraftStairsCobblestone;
+                case "minecraft_stairs_brick": return SVBlocks.minecraftStairsBrick;
+                case "minecraft_stairs_stone_brick": return SVBlocks.minecraftStairsStoneBrick;
+                case "minecraft_stairs_nether_brick": return SVBlocks.minecraftStairsNetherBrick;
+                case "minecraft_stairs_sandstone": return SVBlocks.minecraftStairsSandstone;
+                case "minecraft_stairs_spruce": return SVBlocks.minecraftStairsSpruce;
+                case "minecraft_stairs_birch": return SVBlocks.minecraftStairsBirch;
+                case "minecraft_stairs_jungle": return SVBlocks.minecraftStairsJungle;
+                case "minecraft_stairs_quartz": return SVBlocks.minecraftStairsQuartz;
+                case "minecraft_stairs_acacia": return SVBlocks.minecraftStairsAcacia;
+                case "minecraft_stairs_dark_oak": return SVBlocks.minecraftStairsDarkOak;
+                case "minecraft_stairs_prismarine": return SVBlocks.minecraftStairsPrismarine;
+                case "minecraft_stairs_prismarine_brick": return SVBlocks.minecraftStairsPrismarineBrick;
+                case "minecraft_stairs_dark_prismarine": return SVBlocks.minecraftStairsDarkPrismarine;
+                case "minecraft_stairs_red_sandstone": return SVBlocks.minecraftStairsRedSandstone;
                 default:
                     SnowVariants.LOGGER.error("Object's name: " + name + " is not an available option in blockType > name switch statement for slabs");
                     return null;
