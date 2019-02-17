@@ -1,11 +1,16 @@
 package trikzon.handlers;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.IStateHolder;
+import net.minecraft.state.properties.Half;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.*;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -33,15 +38,23 @@ public class RightClickHandler {
                 ItemStack item = playerIn.getHeldItem(EnumHand.MAIN_HAND);
                 BlockPos blockPos = rayTraceResult.getBlockPos();
 
-                System.out.println(item);
-                System.out.println(new ItemStack(Blocks.SNOW));
-                System.out.println(new ItemStack(item.getItem()).toString().equals(new ItemStack(Blocks.SNOW).toString()));
                 if(new ItemStack(item.getItem()).toString().equals(new ItemStack(Blocks.SNOW).toString())) {
-                    List<Block> originStairValues = Stream.of(EnumMaterials.values()).map(EnumMaterials::getStairsOrigin).collect(Collectors.toList());
-                    SnowVariants.LOGGER.error(originStairValues.size());
-                    for (Block i:originStairValues) {
-                        if(!worldIn.getBlockState(blockPos).getBlock().equals(i)) continue;
-                        System.out.println("This Is It!!!");
+                    for(EnumMaterials materials : EnumMaterials.values()) {
+                        if(!worldIn.getBlockState(blockPos).getBlock().equals(materials.getStairsOrigin())) continue;
+                        switch (materials.getBlockType()) {
+                            case "stairs":
+                                if(!worldIn.getBlockState(blockPos).get(BlockStairs.HALF).equals(Half.BOTTOM)) break;
+                                worldIn.setBlockState(blockPos, materials.getBlock().getDefaultState()
+                                        .with(BlockStairs.FACING, worldIn.getBlockState(blockPos).get(BlockStairs.FACING))
+                                        .with(BlockStairs.HALF, worldIn.getBlockState(blockPos).get(BlockStairs.HALF))
+                                        .with(BlockStairs.SHAPE, worldIn.getBlockState(blockPos).get(BlockStairs.SHAPE))
+                                        .with(BlockStairs.WATERLOGGED, worldIn.getBlockState(blockPos).get(BlockStairs.WATERLOGGED)));
+                                worldIn.playSound((EntityPlayer)null, blockPos, SoundEvents.BLOCK_SNOW_PLACE, SoundCategory.BLOCKS, 1, 1);
+                                if(!playerIn.isCreative()) item.shrink(1);
+                                break;
+                            case "slab":
+                                break;
+                        }
                     }
                 }
             }
