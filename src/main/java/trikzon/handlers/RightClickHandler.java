@@ -59,33 +59,6 @@ public class RightClickHandler {
             }
         }
     }
-    
-/**Old Code, don't uncomment. Instead rewrite*/
-//    public void convertSlab(World worldIn, EntityPlayer playerIn, BlockPos blockPos, Block origin, Block snowVariant) {
-//        if(worldIn.getBlockState(blockPos).getBlock().getDefaultState().equals(origin.getDefaultState())) {
-//            if(worldIn.getBlockState(blockPos).getValue(BlockSlab.HALF).equals(BlockSlab.EnumBlockHalf.BOTTOM)) {
-//                ItemStack item = playerIn.getHeldItem(EnumHand.MAIN_HAND);
-//                worldIn.setBlockState(blockPos, snowVariant.getDefaultState());
-//                worldIn.playSound((EntityPlayer) null, blockPos, SoundEvents.BLOCK_SNOW_PLACE, SoundCategory.BLOCKS, 1, 1);
-//                if (!playerIn.isCreative())
-//                    item.shrink(1);
-//            }
-//        }
-//    }
-//
-//    public void convertSlabWithVariant(World worldIn, EntityPlayer playerIn, BlockPos blockPos, Block origin, PropertyEnum variantType, String variant, Block snowVariant) {
-//        if(worldIn.getBlockState(blockPos).getBlock().getDefaultState().equals(origin.getDefaultState())) {
-//            if(worldIn.getBlockState(blockPos).getValue(BlockSlab.HALF).equals(BlockSlab.EnumBlockHalf.BOTTOM)) {
-//                if(worldIn.getBlockState(blockPos).getValue(variantType).toString().equals(variant)) {
-//                    ItemStack item = playerIn.getHeldItem(EnumHand.MAIN_HAND);
-//                    worldIn.setBlockState(blockPos, snowVariant.getDefaultState());
-//                    worldIn.playSound((EntityPlayer) null, blockPos, SoundEvents.BLOCK_SNOW_PLACE, SoundCategory.BLOCKS, 1, 1);
-//                    if (!playerIn.isCreative())
-//                        item.shrink(1);
-//                }
-//            }
-//        }
-//    }
 
     public RayTraceResult getRaytraceResult(EntityPlayer playerIn, World worldIn) {
         float f1 = playerIn.prevRotationPitch + (playerIn.rotationPitch - playerIn.prevRotationPitch) * 1.0F;

@@ -26,18 +26,11 @@ import javax.annotation.Nullable;
 
 public class SVSlab extends Block {
 
-    private static Block stairsOrigin;
-    private static Float hardness, resistance;
-    private static SoundType soundType;
-    private static ToolType toolType;
+    private final EnumMaterials enumMaterials;
 
     public SVSlab(EnumMaterials enumMaterials) {
         super(Properties.create(enumMaterials.getMaterial()));
-        this.stairsOrigin = enumMaterials.getStairsOrigin();
-        this.hardness = enumMaterials.getHardness();
-        this.resistance = enumMaterials.getResistance();
-        this.soundType = enumMaterials.getSoundType();
-        this.toolType = enumMaterials.getToolType();
+        this.enumMaterials = enumMaterials;
 
         setRegistryName(SnowVariants.MODID, enumMaterials.getName());
     }
@@ -62,30 +55,30 @@ public class SVSlab extends Block {
     @Override
     public ItemStack getPickBlock(IBlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, EntityPlayer player) {
         if(!target.sideHit.equals(EnumFacing.UP))
-            return new ItemStack(stairsOrigin);
+            return new ItemStack(enumMaterials.getStairsOrigin());
         else return new ItemStack(Blocks.SNOW);
     }
 
     @Override
     public void getDrops(IBlockState state, NonNullList<ItemStack> drops, World world, BlockPos pos, int fortune) {
-        drops.add(new ItemStack(stairsOrigin, 1));
+        drops.add(new ItemStack(enumMaterials.getStairsOrigin(), 1));
         drops.add(new ItemStack(Blocks.SNOW, 1));
     }
 
     @Nullable
     @Override
     public ToolType getHarvestTool(IBlockState state) {
-        return toolType;
+        return enumMaterials.getToolType();
     }
 
     @Override
     public float getBlockHardness(IBlockState blockState, IBlockReader worldIn, BlockPos pos) {
-        return hardness;
+        return enumMaterials.getHardness();
     }
 
     @Override
     public float getExplosionResistance() {
-        return resistance;
+        return enumMaterials.getResistance();
     }
 
     @Override

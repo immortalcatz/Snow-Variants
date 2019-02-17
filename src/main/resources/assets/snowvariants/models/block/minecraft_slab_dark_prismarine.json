@@ -1,7 +1,7 @@
 {
   "parent": "snowvariants:block/slab_custom_all",
   "textures": {
-    "side": "block/oak_planks",
+    "side": "block/dark_prismarine",
     "snowTop": "block/snow",
     "snowSide": "snowvariants:block/snow_side"
   }

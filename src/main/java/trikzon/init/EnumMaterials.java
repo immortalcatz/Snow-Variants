@@ -18,7 +18,7 @@ public enum EnumMaterials implements IStringSerializable{
     MINECRAFT_SLAB_ACACIA("minecraft_slab_acacia", Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_DARK_OAK("minecraft_slab_dark_oak", Blocks.DARK_OAK_PLANKS, Blocks.DARK_OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_STONE("minecraft_slab_stone", Blocks.SMOOTH_STONE, Blocks.STONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_SANDSTONE("minecraft_slab_sandstone", Blocks.SANDSTONE, Blocks.SANDSTONE_STAIRS, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_SANDSTONE("minecraft_slab_sandstone", Blocks.SANDSTONE, Blocks.SANDSTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_PETRIFIED_OAK("minecraft_slab_petrified_oak", Blocks.OAK_PLANKS, Blocks.PETRIFIED_OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_COBBLESTONE("minecraft_slab_cobblestone", Blocks.COBBLESTONE, Blocks.COBBLESTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_BRICK("minecraft_slab_brick", Blocks.BRICKS, Blocks.BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
@@ -27,7 +27,7 @@ public enum EnumMaterials implements IStringSerializable{
     MINECRAFT_SLAB_QUARTZ("minecraft_slab_quartz", Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_RED_SANDSTONE("minecraft_slab_red_sandstone", Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_PURPUR("minecraft_slab_purpur", Blocks.PURPUR_BLOCK, Blocks.PURPUR_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_PRISMARINE("minecraft_slab_prismaring", Blocks.PRISMARINE, Blocks.PRISMARINE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_PRISMARINE("minecraft_slab_prismarine", Blocks.PRISMARINE, Blocks.PRISMARINE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_PRISMARINE_BRICK("minecraft_slab_prismarine_brick", Blocks.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_DARK_PRISMARINE("minecraft_slab_dark_prismarine", Blocks.DARK_PRISMARINE, Blocks.DARK_PRISMARINE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab");
 
@@ -74,23 +74,24 @@ public enum EnumMaterials implements IStringSerializable{
         } else if(blockType.equals("slab")) {
             switch ((name)) {
                 case "minecraft_slab_oak": return SVBlocks.minecraftSlabOak;
-                case "minecraftSlabBirch": return SVBlocks.minecraftSlabBirch;
-                case "minecraftSlabJungle":
-                case "minecraftSlabAcacia":
-                case "minecraftSlabDarkOak":
-                case "minecraftSlabStone":
-                case "minecraftSlabSandstone":
-                case "minecraftSlabPetrifiedOak":
-                case "minecraftSlabCobblestone":
-                case "minecraftSlabBrick":
-                case "minecraftSlabStoneBrick":
-                case "minecraftSlabNetherBrick":
-                case "minecraftSlabQuartz":
-                case "minecraftSlabRedSandstone":
-                case "minecraftSlabPurpur":
-                case "minecraftSlabPrismarine":
-                case "minecraftSlabPrismarineBrick":
-                case "minecraftSlabDarkPrismarine":
+                case "minecraft_slab_spruce": return SVBlocks.minecraftSlabSpruce;
+                case "minecraft_slab_birch": return SVBlocks.minecraftSlabBirch;
+                case "minecraft_slab_jungle": return SVBlocks.minecraftSlabJungle;
+                case "minecraft_slab_acacia": return SVBlocks.minecraftSlabAcacia;
+                case "minecraft_slab_dark_oak": return SVBlocks.minecraftSlabDarkOak;
+                case "minecraft_slab_stone": return SVBlocks.minecraftSlabStone;
+                case "minecraft_slab_sandstone": return SVBlocks.minecraftSlabSandstone;
+                case "minecraft_slab_petrified_oak": return SVBlocks.minecraftSlabPetrifiedOak;
+                case "minecraft_slab_cobblestone": return SVBlocks.minecraftSlabCobblestone;
+                case "minecraft_slab_brick": return SVBlocks.minecraftSlabBrick;
+                case "minecraft_slab_stone_brick": return SVBlocks.minecraftSlabStoneBrick;
+                case "minecraft_slab_nether_brick": return SVBlocks.minecraftSlabNetherBrick;
+                case "minecraft_slab_quartz": return SVBlocks.minecraftSlabQuartz;
+                case "minecraft_slab_red_sandstone": return SVBlocks.minecraftSlabRedSandstone;
+                case "minecraft_slab_purpur": return SVBlocks.minecraftSlabPurpur;
+                case "minecraft_slab_prismarine": return SVBlocks.minecraftSlabPrismarine;
+                case "minecraft_slab_prismarine_brick": return SVBlocks.minecraftSlabPrismarineBrick;
+                case "minecraft_slab_dark_prismarine": return SVBlocks.minecraftSlabDarkPrismarine;
                 default:
                     SnowVariants.LOGGER.error("Object's name: " + name + " is not an available option in blockType > name switch statement for slabs");
                     return null;
