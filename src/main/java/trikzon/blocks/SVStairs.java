@@ -1,13 +1,13 @@
 package trikzon.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
@@ -18,17 +18,19 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import trikzon.SnowVariants;
-import trikzon.util.EnumMaterials;
+import trikzon.init.EnumMaterials;
 
 import javax.annotation.Nullable;
 
-public class StairsSnow extends BlockStairs {
+public class SVStairs extends BlockStairs implements IBucketPickupHandler, ILiquidContainer {
     private static Block stairsOrigin;
     private static Float hardness, resistance;
     private static SoundType soundType;
     private static ToolType toolType;
 
-    public StairsSnow(EnumMaterials enumMaterials) {
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
+    public SVStairs(EnumMaterials enumMaterials) {
         super(enumMaterials.getBlockOrigin().getDefaultState(), Properties.create(enumMaterials.getMaterial()));
         this.stairsOrigin = enumMaterials.getStairsOrigin();
         this.hardness = enumMaterials.getHardness();

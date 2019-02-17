@@ -1,4 +1,4 @@
-package trikzon.util;
+package trikzon.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -56,6 +56,8 @@ public enum EnumMaterials implements IStringSerializable{
             }
         } else if(blockType.equals("slab")) {
             switch ((name)) {
+                case "minecraft_slab_oak":
+                    return SVBlocks.minecraftSlabOak;
                 default:
                     SnowVariants.LOGGER.error("Object's name: " + name + " is not an available option in blockType > name switch statement for slabs");
                     return null;

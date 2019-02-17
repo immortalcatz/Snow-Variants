@@ -1,13 +1,13 @@
 package trikzon.handlers;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.IStateHolder;
 import net.minecraft.state.properties.Half;
+import net.minecraft.state.properties.SlabType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
@@ -16,12 +16,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import trikzon.SnowVariants;
-import trikzon.util.EnumMaterials;
-
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import trikzon.init.EnumMaterials;
 
 public class RightClickHandler {
 
@@ -53,6 +48,10 @@ public class RightClickHandler {
                                 if(!playerIn.isCreative()) item.shrink(1);
                                 break;
                             case "slab":
+                                if(!worldIn.getBlockState(blockPos).get(BlockSlab.TYPE).equals(SlabType.BOTTOM)) break;
+                                worldIn.setBlockState(blockPos, materials.getBlock().getDefaultState());
+                                worldIn.playSound((EntityPlayer)null, blockPos, SoundEvents.BLOCK_SNOW_PLACE, SoundCategory.BLOCKS, 1, 1);
+                                if(!playerIn.isCreative()) item.shrink(1);
                                 break;
                         }
                     }
@@ -62,18 +61,6 @@ public class RightClickHandler {
     }
     
 /**Old Code, don't uncomment. Instead rewrite*/
-//    public void convertStair(World worldIn, EntityPlayer playerIn, BlockPos blockPos, Block origin, Block snowVariant) {
-//        if(worldIn.getBlockState(blockPos).getBlock().getDefaultState().equals(origin.getDefaultState())) {
-//            if (worldIn.getBlockState(blockPos).getValue(BlockStairs.HALF).equals(BlockStairs.EnumHalf.BOTTOM)) {
-//                ItemStack item = playerIn.getHeldItem(EnumHand.MAIN_HAND);
-//                worldIn.setBlockState(blockPos, snowVariant.getDefaultState().withProperty(BlockStairs.FACING, worldIn.getBlockState(blockPos).getValue(BlockStairs.FACING)).withProperty(BlockStairs.HALF, worldIn.getBlockState(blockPos).getValue(BlockStairs.HALF)).withProperty(BlockStairs.SHAPE, worldIn.getBlockState(blockPos).getValue(BlockStairs.SHAPE)));
-//                worldIn.playSound((EntityPlayer)null, blockPos, SoundEvents.BLOCK_SNOW_PLACE, SoundCategory.BLOCKS, 1, 1);
-//                if (!playerIn.isCreative())
-//                    item.shrink(1);
-//            }
-//        }
-//    }
-//
 //    public void convertSlab(World worldIn, EntityPlayer playerIn, BlockPos blockPos, Block origin, Block snowVariant) {
 //        if(worldIn.getBlockState(blockPos).getBlock().getDefaultState().equals(origin.getDefaultState())) {
 //            if(worldIn.getBlockState(blockPos).getValue(BlockSlab.HALF).equals(BlockSlab.EnumBlockHalf.BOTTOM)) {
