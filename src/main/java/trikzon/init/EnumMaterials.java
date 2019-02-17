@@ -17,19 +17,19 @@ public enum EnumMaterials implements IStringSerializable{
     MINECRAFT_SLAB_JUNGLE("minecraft_slab_jungle", Blocks.JUNGLE_PLANKS, Blocks.JUNGLE_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_ACACIA("minecraft_slab_acacia", Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
     MINECRAFT_SLAB_DARK_OAK("minecraft_slab_dark_oak", Blocks.DARK_OAK_PLANKS, Blocks.DARK_OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
-    MINECRAFT_SLAB_STONE("minecraft_slab_stone", Blocks.SMOOTH_STONE, Blocks.STONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_SANDSTONE("minecraft_slab_sandstone", Blocks.SANDSTONE, Blocks.SANDSTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_STONE("minecraft_slab_stone", Blocks.SMOOTH_STONE, Blocks.STONE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_SANDSTONE("minecraft_slab_sandstone", Blocks.SANDSTONE, Blocks.SANDSTONE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
     MINECRAFT_SLAB_PETRIFIED_OAK("minecraft_slab_petrified_oak", Blocks.OAK_PLANKS, Blocks.PETRIFIED_OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab"),
-    MINECRAFT_SLAB_COBBLESTONE("minecraft_slab_cobblestone", Blocks.COBBLESTONE, Blocks.COBBLESTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_BRICK("minecraft_slab_brick", Blocks.BRICKS, Blocks.BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_STONE_BRICK("minecraft_slab_stone_brick", Blocks.STONE_BRICKS, Blocks.STONE_BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_NETHER_BRICK("minecraft_slab_nether_brick", Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_QUARTZ("minecraft_slab_quartz", Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_RED_SANDSTONE("minecraft_slab_red_sandstone", Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_PURPUR("minecraft_slab_purpur", Blocks.PURPUR_BLOCK, Blocks.PURPUR_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_PRISMARINE("minecraft_slab_prismarine", Blocks.PRISMARINE, Blocks.PRISMARINE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_PRISMARINE_BRICK("minecraft_slab_prismarine_brick", Blocks.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab"),
-    MINECRAFT_SLAB_DARK_PRISMARINE("minecraft_slab_dark_prismarine", Blocks.DARK_PRISMARINE, Blocks.DARK_PRISMARINE_SLAB, Material.ROCK, 2.0f, 7.5f, SoundType.STONE, ToolType.PICKAXE, "slab");
+    MINECRAFT_SLAB_COBBLESTONE("minecraft_slab_cobblestone", Blocks.COBBLESTONE, Blocks.COBBLESTONE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_BRICK("minecraft_slab_brick", Blocks.BRICKS, Blocks.BRICK_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_STONE_BRICK("minecraft_slab_stone_brick", Blocks.STONE_BRICKS, Blocks.STONE_BRICK_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_NETHER_BRICK("minecraft_slab_nether_brick", Blocks.NETHER_BRICKS, Blocks.NETHER_BRICK_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_QUARTZ("minecraft_slab_quartz", Blocks.QUARTZ_BLOCK, Blocks.QUARTZ_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_RED_SANDSTONE("minecraft_slab_red_sandstone", Blocks.RED_SANDSTONE, Blocks.RED_SANDSTONE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_PURPUR("minecraft_slab_purpur", Blocks.PURPUR_BLOCK, Blocks.PURPUR_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_PRISMARINE("minecraft_slab_prismarine", Blocks.PRISMARINE, Blocks.PRISMARINE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_PRISMARINE_BRICK("minecraft_slab_prismarine_brick", Blocks.PRISMARINE_BRICKS, Blocks.PRISMARINE_BRICK_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab"),
+    MINECRAFT_SLAB_DARK_PRISMARINE("minecraft_slab_dark_prismarine", Blocks.DARK_PRISMARINE, Blocks.DARK_PRISMARINE_SLAB, Material.ROCK, 2.0f, 15.0f, SoundType.STONE, ToolType.PICKAXE, "slab");
 
     private String name;
     private Block blockOrigin;
