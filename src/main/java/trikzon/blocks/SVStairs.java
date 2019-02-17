@@ -33,10 +33,10 @@ public class StairsSnow extends BlockStairs {
         this.stairsOrigin = enumMaterials.getStairsOrigin();
         this.hardness = enumMaterials.getHardness();
         this.resistance = enumMaterials.getResistance();
+        this.soundType = enumMaterials.getSoundType();
         this.toolType = enumMaterials.getToolType();
 
         this.setRegistryName(SnowVariants.MODID, enumMaterials.getName());
-        this.soundType = enumMaterials.getSoundType();
     }
 
     @Override

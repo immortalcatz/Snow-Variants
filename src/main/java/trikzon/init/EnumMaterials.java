@@ -10,7 +10,8 @@ import trikzon.SnowVariants;
 import trikzon.init.SVBlocks;
 
 public enum EnumMaterials implements IStringSerializable{
-    MINECRAFT_STAIRS_OAK("minecraft_stairs_oak", Blocks.OAK_PLANKS, Blocks.OAK_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs");
+    MINECRAFT_STAIRS_OAK("minecraft_stairs_oak", Blocks.OAK_PLANKS, Blocks.OAK_STAIRS, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "stairs"),
+    MINECRAFT_SLAB_OAK("minecraft_slab_oak", Blocks.OAK_PLANKS, Blocks.OAK_SLAB, Material.WOOD, 2.0f, 7.5f, SoundType.WOOD, ToolType.AXE, "slab");
 
     private String name;
     private Block blockOrigin;
